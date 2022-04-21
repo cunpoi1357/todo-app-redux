@@ -1,7 +1,7 @@
 import { Col, Row, Input, Typography, Radio, Select, Tag } from 'antd';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { searchChange, statusChange, prioritesChange } from '../../redux/actions'
+import filterSlice from './filtersSlice';
 
 const { Search } = Input;
 
@@ -9,6 +9,9 @@ export default function Filters() {
   const [search, setSearch] = useState('')
   const [status, setStatus] = useState('All')
   const [priorities, setPriorities] = useState([])
+
+  // filters actions
+  const { searchChange, statusChange, prioritesChange } = filterSlice.actions
 
   const dispatch = useDispatch()
 
