@@ -53,15 +53,3 @@ export const updateTodo = createAsyncThunk('todos/updateTodo', async (id) => {
 })
 
 export default todoListSlice
-
-// export function addTodos(todo) {
-//     return function addTodosThunk(dispatch, getState) {
-//         console.log('[addTodoThunk]', getState())
-//         console.log({ todo })
-
-//         todo.name = 'Custum'
-
-//         dispatch(todoListSlice.actions.addTodo(todo))
-//         console.log('[addTodoThunk]', getState())
-//     }
-// }
