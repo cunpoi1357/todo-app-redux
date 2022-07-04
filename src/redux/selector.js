@@ -1,15 +1,15 @@
 import { createSelector } from '@reduxjs/toolkit'
 
-const todoListSeletor = state => state.todoList
-const filterSearchSeletor = state => state.filters.search
-const filterStatusSeletor = state => state.filters.status
-const filterPrioritiesSeletor = state => state.filters.priorities
+const todoListSelector = state => state.todoList
+const filterSearchSelector = state => state.filters.search
+const filterStatusSelector = state => state.filters.status
+const filterPrioritiesSelector = state => state.filters.priorities
 
 export const todoListRemaining = createSelector(
-    todoListSeletor,
-    filterSearchSeletor,
-    filterStatusSeletor,
-    filterPrioritiesSeletor,
+    todoListSelector,
+    filterSearchSelector,
+    filterStatusSelector,
+    filterPrioritiesSelector,
     (todoList, filterSearch, filterStatus, filterPriorities) =>
         todoList.filter(todo => {
             if (filterStatus === 'All') {
