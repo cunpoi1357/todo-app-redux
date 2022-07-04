@@ -1,7 +1,7 @@
 const initalState = {
     search: '',
     status: 'All',
-    priorites: []
+    priorities: []
 }
 
 const filterSlice = (state = initalState, action) => {
@@ -16,10 +16,10 @@ const filterSlice = (state = initalState, action) => {
                 ...state,
                 status: action.payload
             }
-        case 'filters/prioritesChange':
+        case 'filters/prioritiesChange':
             return {
                 ...state,
-                priorites: action.payload
+                priorities: action.payload
             }
         default:
             return state

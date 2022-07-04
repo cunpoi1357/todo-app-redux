@@ -18,7 +18,7 @@ export const statusChange = value => ({
     payload: value
 })
 
-export const prioritesChange = value => ({
-    type: 'filters/prioritesChange',
+export const prioritiesChange = value => ({
+    type: 'filters/prioritiesChange',
     payload: value
 })
