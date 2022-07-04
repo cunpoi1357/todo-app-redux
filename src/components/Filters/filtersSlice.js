@@ -5,7 +5,7 @@ const filterSlice = createSlice({
     initialState: {
         search: '',
         status: 'All',
-        priorites: []
+        priorities: []
     },
     reducers: {
         searchChange(state, action) {
@@ -14,8 +14,8 @@ const filterSlice = createSlice({
         statusChange(state, action) {
             state.status = action.payload
         },
-        prioritesChange(state, action) {
-            state.priorites = action.payload
+        prioritiesChange(state, action) {
+            state.priorities = action.payload
         }
     }
 })
