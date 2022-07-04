@@ -13,8 +13,7 @@ const todoListSlice = createSlice({
         },
         toggleTodo(state, action) {
             const currentTodo = state.find(todo => todo.id === action.payload)
-            if (currentTodo)
-                currentTodo.completed = !currentTodo.completed
+            if (currentTodo) currentTodo.completed = !currentTodo.completed
         }
     }
 })
